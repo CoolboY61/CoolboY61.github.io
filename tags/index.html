@@ -610,7 +610,19 @@ $(function () {
     <script async src="/CoolboY61.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
+
     
+
+    <script type="text/javascript">
+        var OriginTitile = document.title,
+            st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "莫愁前路无知己~", clearTimeout(st)) : (document.title =
+                "天下谁人不识君~", st = setTimeout(function () {
+                    document.title = OriginTitile
+                }, 3e3))
+        })
+    </script>
 
     
 

@@ -579,7 +579,7 @@
 <div class="music-player">
     
         <div class="title center-align">
-            <i class="fas fa-music"></i>&nbsp;&nbsp;有为青年
+            <i class="fas fa-music"></i>&nbsp;&nbsp;有为青年勇于追梦,行无限韶华努力成功
         </div>
     
     <div class="row">
@@ -588,7 +588,7 @@
                    type="playlist"
                    id="3808501542"
                    fixed='false'
-                   autoplay='true'
+                   autoplay='false'
                    theme='#42b983'
                    loop='all'
                    order='list'
@@ -904,7 +904,19 @@ $(function () {
     <script async src="/CoolboY61.github.io/libs/others/busuanzi.pure.mini.js"></script>
     
 
+
     
+
+    <script type="text/javascript">
+        var OriginTitile = document.title,
+            st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "莫愁前路无知己~", clearTimeout(st)) : (document.title =
+                "天下谁人不识君~", st = setTimeout(function () {
+                    document.title = OriginTitile
+                }, 3e3))
+        })
+    </script>
 
     
 
