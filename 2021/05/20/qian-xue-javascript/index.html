@@ -535,7 +535,7 @@
 <p>命名不可以以数字开头</p>
 </blockquote>
 <ul>
-<li><p><strong>==number===</strong> 类型 JavaScript不区分整数小数</p>
+<li><p><strong><code>number</code></strong> 类型 JavaScript不区分整数小数</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">123</span> <span class="token comment">// 整数</span>
 <span class="token number">123.123</span> <span class="token comment">// 小数</span>
 <span class="token number">1.123e3</span> <span class="token comment">// 科学计数法</span>
@@ -545,7 +545,7 @@
 
 <p>浮点数有精度问题，尽量避免使用浮点数计算</p>
 </li>
-<li><p>==<strong>字符串</strong>==</p>
+<li><p><strong><code>字符串</code></strong></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string">'abs'</span>
 <span class="token string">"abs"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -579,12 +579,12 @@ student<span class="token punctuation">.</span><span class="token function">toLo
 </blockquote>
 </blockquote>
 </li>
-<li><p><strong>==布尔值==</strong></p>
+<li><p><strong><code>布尔值</code></strong></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token boolean">true</span>
 flase<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li><h5 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="==逻辑运算=="></a><strong>==逻辑运算==</strong></h5><p>&amp;&amp;      ||     ！</p>
+<li><h5 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a><strong><code>逻辑运算</code></strong></h5><p>&amp;&amp;      ||     ！</p>
 </li>
-<li><p><strong>==比较运算符==</strong></p>
+<li><p><strong><code>比较运算符</code></strong></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">=</span>
 <span class="token operator">==</span>		等于（类型不一样，值一样，也会判断为<span class="token boolean">true</span>）
 <span class="token operator">===</span>		绝对等于（类型一样，值一样，结果为<span class="token boolean">true</span>）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -593,11 +593,11 @@ flase<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <p>NaN与所有值都不相等，包括自己</p>
 <p>只能通过isNaN（变量）来判断</p>
 </li>
-<li><p><strong>==null和undefined==</strong></p>
+<li><p><strong><code>null和undefined</code></strong></p>
 <p>null：空</p>
 <p>undefined：未定义</p>
 </li>
-<li><p><strong>==数组==</strong></p>
+<li><p><strong><code>数组</code></strong></p>
 <p><font color="red">&nbsp;注意：java数组中存放的必须是相同数据类型的值，而javascript中没有要求</font></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
     <span class="token comment">// 保证代码的可读性，一般使用第一种</span>
@@ -637,7 +637,7 @@ arr<span class="token punctuation">.</span><span class="token function">join</sp
 </li>
 </ul>
 <ul>
-<li><p><strong>==对象==</strong></p>
+<li><p><strong><code>对象</code></strong></p>
 <p>对象是大括号，数组是中括号……</p>
 <p>每个属性之间使用逗号隔开，最后一个不需要加</p>
 <p><strong>若干个键值对</strong></p>
@@ -686,7 +686,7 @@ person<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 <ul>
-<li><p>==<strong>Map和Set</strong>==</p>
+<li><p><strong><code>Map和Set</code></strong></p>
 <ul>
 <li><p>Map</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"Tom"</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"jerry"</span><span class="token punctuation">,</span><span class="token number">95</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"admin"</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -806,7 +806,7 @@ set<span class="token punctuation">.</span><span class="token function">has</spa
 x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token comment">// Uncaught ReferenceError: x is not defined</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>==<strong>养成习惯：</strong>==所有的变量都定义在函数的头部，不要乱放，便于代码的维护</p>
+<p>**<code>养成习惯：</code>**所有的变量都定义在函数的头部，不要乱放，便于代码的维护</p>
 <p>全局变量 / 局部变量 / 全局对象window</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token string">'X'</span><span class="token punctuation">;</span>
 <span class="token function">alert</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -958,7 +958,7 @@ user <span class="token operator">=</span> <span class="token punctuation">{</sp
 
 <h2 id="8-操作BOM对象"><a href="#8-操作BOM对象" class="headerlink" title="8. 操作BOM对象"></a>8. 操作BOM对象</h2><p>BOM：浏览器对象模型</p>
 <p>JavaScript 的诞生就是为了能够让他在浏览器中运行！！！！</p>
-<p>==对象：==</p>
+<p><code>对象：</code></p>
 <blockquote>
 <p>window：     代表浏览器窗口</p>
 </blockquote>
@@ -1041,7 +1041,7 @@ history<span class="token punctuation">.</span><span class="token function">forw
 
 
 <h2 id="9-操作DOM对象（重点-）"><a href="#9-操作DOM对象（重点-）" class="headerlink" title="9. 操作DOM对象（重点*）"></a>9. 操作DOM对象（重点*）</h2><blockquote>
-<p>==<strong>核心：</strong>=</p>
+<p><strong>核心：</strong></p>
 </blockquote>
 <p>浏览器网页就是一个DOM的树形结构！</p>
 <ul>
