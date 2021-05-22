@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PicGo + GitHub 搭建个人图床, CoolYの博客">
+    <meta name="keywords" content="JavaWeb学习, CoolYの博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PicGo + GitHub 搭建个人图床 | CoolYの博客</title>
+    <title>JavaWeb学习 | CoolYの博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PicGo + GitHub 搭建个人图床</h1>
+                    <h1 class="description center-align post-title">JavaWeb学习</h1>
                 </div>
             </div>
         </div>
@@ -457,8 +457,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/web/">
-                                <span class="chip bg-color">web</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -473,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-05-22
                 </div>
                 
 
@@ -487,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    972
                 </div>
                 
 
@@ -512,52 +516,98 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>PicGo这款工具，可以轻易的将图片转换为链接。结合Github解决了Typora对图片这一困扰我许久的难题</p>
-<h2 id="1-GitHub-仓库设置"><a href="#1-GitHub-仓库设置" class="headerlink" title="1. GitHub 仓库设置"></a>1. GitHub 仓库设置</h2><blockquote>
-<p>流程：新建 public 仓库 -&gt; 创建 token -&gt; 复制 token 备用</p>
-</blockquote>
-<h3 id="1-1-新建仓库"><a href="#1-1-新建仓库" class="headerlink" title="1.1 新建仓库"></a>1.1 新建仓库</h3><p><strong>点击 git 主页右上角的 <code>+</code> 创建 <code>New repository</code>；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/2.png"></p>
-<p><strong>填写仓库信息，例如我就创建了一个 <code>cloudimg</code> 的仓库。这里注意，仓库得设置为 <code>Public</code> 因为后面通过客户端访问算是外部访问，因此无法访问 <code>Private</code> ，这样的话图片传上来之后只能存储不能显示。所以要设置为 <code>Public</code>。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/1.png"></p>
-<h3 id="1-2-创建-token-并复制保存"><a href="#1-2-创建-token-并复制保存" class="headerlink" title="1.2 创建 token 并复制保存"></a>1.2 创建 token 并复制保存</h3><p><strong>此时仓库已经建立，点击右上角头像，然后进入设置；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/4.png"></p>
-<p><strong>在页面最下找到 <code>Developer settings</code>，点击进入；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/5.png"></p>
-<p><strong>创建 token；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/6.png"></p>
-<p><strong>填 description（也是随心填），勾选复选框 repo ，接着到页面底部 <code>Generate token</code> 就完成了；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/7.png"></p>
-<p><strong>然后复制生成一串字符 token，这个 token 只出现一次，所以要保存一下（我一般记在微信收藏）。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/8.png"></p>
-<h2 id="2-PicGo-客户端配置"><a href="#2-PicGo-客户端配置" class="headerlink" title="2. PicGo 客户端配置"></a>2. PicGo 客户端配置</h2><h3 id="2-1-下载-amp-安装"><a href="#2-1-下载-amp-安装" class="headerlink" title="2.1 下载&amp;安装"></a>2.1 下载&amp;安装</h3><p>PicGo （目前 2.0.4）是一个开源的图床工具，非常优秀。可以到 git 上下载，但下载速度太慢，所以我放了一个百度云的链接，速度快很多。</p>
-<p>git地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo</a></p>
-<p>Win版下载链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/17KycPMoqNCnc1cR_yQO8nQ">百度云</a> 密码：PicG</p>
-<h3 id="2-2-配置"><a href="#2-2-配置" class="headerlink" title="2.2 配置"></a>2.2 配置</h3><p>先上图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/9.png"></p>
+                <h1 id="JavaWeb"><a href="#JavaWeb" class="headerlink" title="JavaWeb"></a>JavaWeb</h1><h1 id="1、基础概念"><a href="#1、基础概念" class="headerlink" title="1、基础概念"></a>1、基础概念</h1><h2 id="1-1、前言"><a href="#1-1、前言" class="headerlink" title="1.1、前言"></a>1.1、前言</h2><p>web开发：</p>
 <ul>
-<li><p>仓库名 即你的仓库名</p>
+<li>web：网页，eg：<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></li>
+<li>静态web<ul>
+<li>html、css一些静态资源</li>
+<li>提供给所有人看的数据，所有人看的都是一样的，始终不会发生变化！</li>
+</ul>
 </li>
-<li><p>分支名 默认 <code>master</code></p>
-</li>
-<li><p>Token 就是刚刚复制的那一串字符</p>
-</li>
-<li><p>存储路径 这个可以填也可以不填，填了的话图片就上传到 git 中 <code>data</code> 这个文件夹</p>
-</li>
-<li><p>域名 <code>https://raw.githubusercontent.com/yefcion/cloudimg/master</code>这个要改一下 格式 <code>https://raw.githubusercontent.com/[username]/[仓库名]/master</code>（更快！）</p>
+<li>动态web<ul>
+<li>eg：淘宝，B站。现在几乎所有的网站都是动态的</li>
+<li>网页会随着看的人不同而不同，在不同的时间、地点也会产生变化</li>
+<li>技术栈：Servlet / JSP，ASP，PHP</li>
+</ul>
 </li>
 </ul>
-<p>然后点确定就可以了。</p>
-<blockquote>
-<p>注：这里提供一个加速访问图片的方法：CDN加速，具体原理自行百度（我还不是很懂）<br>将上面的域名改为：</p>
-<p>原 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/yefcion/cloudimg/master">https://raw.githubusercontent.com/yefcion/cloudimg/master</a><br>现 <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yefcion/cloudimg@master">https://cdn.jsdelivr.net/gh/yefcion/cloudimg@master</a></p>
-</blockquote>
-<p>然后关于上传的快捷键设置。默认的是 Mac 按键，推荐改成 <code>Ctrl + alt +c</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/10.png"></p>
-<p>综上，操作完成。</p>
-<p>本方案唯一缺点，不能私人。但是考虑到 GitHub 上传的图在列表里没法预览，应该没人会闲着没事翻记录。</p>
-<p>转载至：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yefcion/article/details/88412025">https://blog.csdn.net/yefcion/article/details/88412025</a></p>
-
+<h2 id="1-2、web应用程序"><a href="#1-2、web应用程序" class="headerlink" title="1.2、web应用程序"></a>1.2、web应用程序</h2><p><code>程序 = 算法 + 数据结构</code></p>
+<p>web应用程序：可以提供浏览器访问的程序</p>
+<ul>
+<li>在浏览器上访问的任何一个页面或资源，都存在世界上的某一个计算机上</li>
+<li>URL：统一资源定位符</li>
+<li>这个同意的web资源会被放在同一个文件夹下，web应用程序–&gt;Tomcat：服务器</li>
+<li>一个web应用由多部分组成（静态web，动态web）<ul>
+<li>html、css、javascript</li>
+<li>jsp、servelt</li>
+<li>java</li>
+<li>jar包</li>
+<li>配置文件（properties）</li>
+</ul>
+</li>
+</ul>
+<p>web应用程序编写完毕后，若想提供给外界访问，需要一个服务起来统一管理</p>
+<h2 id="1-3、静态web"><a href="#1-3、静态web" class="headerlink" title="1.3、静态web"></a>1.3、静态web</h2><ul>
+<li>*.html ……都是网页的后缀，如果服务器上一直有这些东西，我们就可以直接读取网页。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/JavaWeb/img/1.png"></p>
+<ul>
+<li>缺点：<ul>
+<li>web页面无法动态更新，所有用户看到的都是同一个页面<ul>
+<li>轮播图、点击特效、伪动态</li>
+<li>技术：JavaScript、VBScript</li>
+</ul>
+</li>
+<li>它无法和数据库交互（数据无法持久化，用户无法交互）</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4、动态web"><a href="#1-4、动态web" class="headerlink" title="1.4、动态web"></a>1.4、动态web</h2><p><code>web页面的展示效果因人而异</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/JavaWeb/img/2.png"></p>
+<ul>
+<li>缺点：<ul>
+<li>家兔服务器的动态web资源出现问题，我们需要重新编写我们的<strong>后台程序</strong></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>优点：<ul>
+<li>web页面可以动态更新，所有用户看到的都不是用一个页面</li>
+<li>它可以与数据库进行交互（数据可以持久化）</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/JavaWeb/img/3.png"></p>
+<h1 id="2、web服务器"><a href="#2、web服务器" class="headerlink" title="2、web服务器"></a>2、web服务器</h1><h2 id="2-1、技术讲解"><a href="#2-1、技术讲解" class="headerlink" title="2.1、技术讲解"></a>2.1、技术讲解</h2><p>B / S：浏览器和服务器</p>
+<p>C / S：客户端和服务器</p>
+<p><code>ASP：</code></p>
+<ul>
+<li>微软的技术：在国内最早流行的就是ASP</li>
+<li>在HTML中嵌入的VB的脚本：ASP+COM</li>
+<li>在ASP开发中，基本上一个页面都有几千行业务代码，页面及其混乱</li>
+<li>维护成本高！</li>
+</ul>
+<p><code>PHP：</code></p>
+<ul>
+<li>PHP开发速度很快，功能很强大，跨平台，代码很简单</li>
+<li>无法承载大访问量的情况（局限性，支持不了大型网站）</li>
+</ul>
+<p><code>JSP / Servlet:</code></p>
+<ul>
+<li>SUN公司主推的B/S架构</li>
+<li>基于Java语言的</li>
+<li>可以承载三高问题带来的影响</li>
+<li>语法和ASP相似</li>
+</ul>
+<p><strong>（三高：高并发 、高性能、高可用）</strong></p>
+<h2 id="2-2、web服务器"><a href="#2-2、web服务器" class="headerlink" title="2.2、web服务器"></a>2.2、web服务器</h2><p>服务器是一种被动的操作，用来处理用户的一些请求和给用户一些响应信息：</p>
+<p><strong>LLS：</strong></p>
+<p>微软的，windows自带的</p>
+<p><strong>Tomcat：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/JavaWeb/img/4.png"></p>
+<p>Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8">服务器</a>，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说，可以这样认为，当在一台机器上配置好Apache 服务器，可利用它响应<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HTML">HTML</a>（<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/6805073">标准通用标记语言</a>下的一个应用）页面的访问请求。实际上Tomcat是Apache 服务器的扩展，但运行时它是独立运行的，所以当你运行tomcat 时，它实际上作为一个与Apache 独立的进程单独运行的。</p>
+<p>诀窍是，当配置正确时，Apache 为HTML页面服务，而Tomcat 实际上运行JSP 页面和Servlet。另外，Tomcat和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/IIS">IIS</a>等Web服务器一样，具有处理HTML页面的功能，另外它还是一个Servlet和JSP容器，独立的Servlet容器是Tomcat的默认模式。不过，Tomcat处理静态<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HTML">HTML</a>的能力不如Apache服务器。目前Tomcat最新版本为10.0.5<strong>。</strong></p>
+<h1 id="3、Tomcat"><a href="#3、Tomcat" class="headerlink" title="3、Tomcat"></a>3、Tomcat</h1><h2 id="3-1、Tomcat的下载-、安装"><a href="#3-1、Tomcat的下载-、安装" class="headerlink" title="3.1、Tomcat的下载  、安装"></a>3.1、Tomcat的下载  、安装</h2>
                 
             </div>
             <hr/>
@@ -583,7 +633,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/">https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/</a>
+                    <a href="https://wendao.online/2021/05/22/javaweb-xue-xi/">https://wendao.online/2021/05/22/javaweb-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,8 +671,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/web/">
-                                    <span class="chip bg-color">web</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -793,7 +847,7 @@
         repo: 'CoolboY61.github.io',
         owner: 'CoolboY61',
         admin: ["CoolboY61"],
-        id: '2021-05-20T21-25-50',
+        id: '2021-05-22T11-25-29',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -821,28 +875,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/20/qian-xue-css3/">
+                <a href="/2021/05/22/javaweb-xue-xi/">
                     <div class="card-image">
                         
-                        <img src="/img/3.jpg" class="responsive-img" alt="浅学CSS3">
+                        <img src="/img/5.jpg" class="responsive-img" alt="JavaWeb学习">
                         
-                        <span class="card-title">浅学CSS3</span>
+                        <span class="card-title">JavaWeb学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            记录一下自己JavaWeb的学习！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -851,15 +906,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/web/">
-                        <span class="chip bg-color">web</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/Web/">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>
@@ -873,12 +929,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/20/qian-xue-html5/">
+                <a href="/2021/05/20/qian-xue-javascript/">
                     <div class="card-image">
                         
-                        <img src="/img/1.jpg" class="responsive-img" alt="浅学HTML5">
+                        <img src="/img/4.jpg" class="responsive-img" alt="浅学JavaScript">
                         
-                        <span class="card-title">浅学HTML5</span>
+                        <span class="card-title">浅学JavaScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://wendao.online/2021/05/22/javaweb-xue-xi/</loc>
+    <lastmod>2021-05-22</lastmod>
+  </url>
+  <url>
     <loc>https://wendao.online/2021/05/20/qian-xue-javascript/</loc>
-    <lastmod>2021-05-20</lastmod>
+    <lastmod>2021-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/</loc>
+    <lastmod>2021-05-22</lastmod>
   </url>
   <url>
     <loc>https://wendao.online/2021/05/20/qian-xue-css3/</loc>
@@ -10,10 +18,6 @@
   </url>
   <url>
     <loc>https://wendao.online/2021/05/20/qian-xue-html5/</loc>
-    <lastmod>2021-05-20</lastmod>
-  </url>
-  <url>
-    <loc>https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/</loc>
     <lastmod>2021-05-20</lastmod>
   </url>
 </urlset> 
