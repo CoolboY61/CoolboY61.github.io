@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.7k
                 </div>
                 
 
@@ -801,18 +801,58 @@
 <p><code>当你的浏览器中地址栏输入地址并回车的一瞬间到页面能够展示回来，经历了什么？</code></p>
 <p>……当准备充分后回来解决这个问题！……</p>
 <h2 id="5、Maven"><a href="#5、Maven" class="headerlink" title="5、Maven"></a>5、Maven</h2><p>​        Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%96%87%E6%A1%A3/1009768">文档</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/6854630">项目管理工具</a>软件。</p>
-<p>​        Maven是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">项目管理工具</a>，它包含了一个项目对象模型 (Project Object Model)，一组标准集合，一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">项目生命周期</a>(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8F%92%E4%BB%B6">插件</a>(plugin)目标(goal)的逻辑。当你使用Maven的时候，你用一个明确定义的项目对象模型来描述你的项目，然后Maven可以应用横切的逻辑，这些逻辑来自一组共享的（或者自定义的）插件。</p>
+<p>​        Maven是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">项目管理工具</a> （<strong>项目架构管理工具</strong>），它包含了一个项目对象模型 (Project Object Model)，一组标准集合，一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A1%B9%E7%9B%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">项目生命周期</a>(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段(phase)中<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8F%92%E4%BB%B6">插件</a>(plugin)目标(goal)的逻辑。当你使用Maven的时候，你用一个明确定义的项目对象模型来描述你的项目，然后Maven可以应用横切的逻辑，这些逻辑来自一组共享的（或者自定义的）插件。</p>
 <h3 id="5-1、学习必要性"><a href="#5-1、学习必要性" class="headerlink" title="5.1、学习必要性"></a>5.1、学习必要性</h3><ol>
-<li><p>在JavaWeb开发中，需要使用大量的jar包，我们手动去导入</p>
+<li><p>在JavaWeb开发中，需要使用大量的jar包，原本需要我们手动去导入</p>
 </li>
 <li><p>如何能够让一个东西自动帮我们导入和配置这个jar包？</p>
 <p>​    由此Maven诞生了</p>
 </li>
 </ol>
-<p>Maven核心思想： <strong>约定大于配置</strong> —-&gt; 有约束，不要违反 </p>
-<p>Maven会规定好我们如何去编写我们的Java代码，必须要按照这个规范来</p>
-<h3 id="5-2、下载安装"><a href="#5-2、下载安装" class="headerlink" title="5.2、下载安装"></a>5.2、下载安装</h3><p>官网：<a target="_blank" rel="noopener" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+<p><strong>Maven核心思想：</strong> <strong>约定大于配置</strong> —-&gt; 有约束，不要违反 </p>
+<p>Maven会规定好我们如何去编写我们的Java代码（目录结构），必须要按照这个规范来</p>
+<h3 id="5-2、下载、安装、配置"><a href="#5-2、下载、安装、配置" class="headerlink" title="5.2、下载、安装、配置"></a>5.2、下载、安装、配置</h3><ul>
+<li><p>下载：官网 –&gt; <a target="_blank" rel="noopener" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+</li>
+<li><p>安装：下载结束直接解压即可</p>
+</li>
+<li><p>配置：在我们的系统环境变量中</p>
+<ul>
+<li>M2_HOME：E:\Tools\apache-maven-3.8.1\bin</li>
+<li>MAVEN_HOME：E:\Tools\apache-maven-3.8.1</li>
+<li>在系统环境变量Path中配置：%M2_HOME% 或 %MAVEN_HOME%\bin</li>
+</ul>
+</li>
+<li><p>测试：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/JavaWeb/img/7.png"></p>
+<p>​    有信息显示即为成功！！！</p>
+<h3 id="5-3、配置阿里云镜像"><a href="#5-3、配置阿里云镜像" class="headerlink" title="5.3、配置阿里云镜像"></a>5.3、配置阿里云镜像</h3><p>由于国内有墙，访问外网服务器速度贼慢甚至无法访问，所以建议使用阿里云镜像进行下载从而提高jar包下载速度</p>
+<p>修改<strong>setting.xml</strong>，在<strong>mirrors</strong>节点下加入一个新的mirror节点，配置阿里镜像地址，完整配置如下:</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrors</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">&gt;</span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://maven.aliyun.com/nexus/content/groups/public<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrors</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+<h3 id="5-3、配置本地仓库"><a href="#5-3、配置本地仓库" class="headerlink" title="5.3、配置本地仓库"></a>5.3、配置本地仓库</h3><p>创建在本地的仓库：</p>
+<ul>
+<li><p>先在自己选择的地址下新建一个文件eg：E:\Tools\apache-maven-3.8.1\maven-repo</p>
+</li>
+<li><p>修改setting.xml，在localRepository节点下加入一个新的localRepository节点，配置本地仓库，完整配置如下:</p>
+</li>
+</ul>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localRepository</span><span class="token punctuation">&gt;</span></span>E:\Tools\apache-maven-3.8.1\maven-repo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localRepository</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="5-4、在IDEA中使用Maven"><a href="#5-4、在IDEA中使用Maven" class="headerlink" title="5.4、在IDEA中使用Maven"></a>5.4、在IDEA中使用Maven</h3>
                 
             </div>
             <hr/>
@@ -1401,7 +1441,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.9k</span>
+                        class="white-color">13.3k</span>
             
             
             
