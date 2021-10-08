@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wendao.online/about/index.html</loc>
+    <loc>https://wendao.online/2021/10/08/mybatis/</loc>
     
-    <lastmod>2021-05-25</lastmod>
+    <lastmod>2021-10-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wendao.online/2021/05/22/javaweb-xue-xi/</loc>
+    <loc>https://wendao.online/about/index.html</loc>
     
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-05-25</lastmod>
     
   </url>
   
@@ -81,7 +81,7 @@
 
   <url>
     <loc>https://wendao.online/</loc>
-    <lastmod>2021-05-25</lastmod>
+    <lastmod>2021-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -89,35 +89,28 @@
   
   <url>
     <loc>https://wendao.online/tags/HTML/</loc>
-    <lastmod>2021-05-25</lastmod>
+    <lastmod>2021-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wendao.online/tags/web/</loc>
-    <lastmod>2021-05-25</lastmod>
+    <lastmod>2021-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wendao.online/tags/CSS/</loc>
-    <lastmod>2021-05-25</lastmod>
+    <lastmod>2021-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wendao.online/tags/Java/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wendao.online/tags/Web/</loc>
-    <lastmod>2021-05-25</lastmod>
+    <loc>https://wendao.online/tags/%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2021-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
