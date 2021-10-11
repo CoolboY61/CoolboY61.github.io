@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, CoolYの博客">
+    <meta name="keywords" content="标签: Java, CoolYの博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | CoolYの博客</title>
+    <title>标签: Java | CoolYの博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -332,13 +332,7 @@
 
 </header>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.barrager.js"></script>
-
-<div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -392,80 +386,114 @@
     </div>
 </div>
 
-<style>
-    #send{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #0ba360;
-    }
-    #clear{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #e7c65c;
-    }
-    p{
-        text-align: center;
-    }
-</style>
 <main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
-                </div>
-                <h1 id="欢迎来留言啊！"><a href="#欢迎来留言啊！" class="headerlink" title="欢迎来留言啊！"></a>欢迎来留言啊！</h1>
+
+    
+
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
-            <!--valine评论弹幕-->
-            
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/HTML/" title="HTML: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="HTML" style="background-color: #F9EBEA;">HTML
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/web/" title="web: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="web" style="background-color: #F5EEF8;">web
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/CSS/" title="CSS: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="CSS" style="background-color: #D5F5E3;">CSS
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Java/" title="Java: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="Java" style="background-color: #E8F8F5;">Java
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%A1%86%E6%9E%B6/" title="框架: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="框架" style="background-color: #FEF9E7;">框架
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="多线程: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="多线程" style="background-color: #F8F9F9;">多线程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
         </div>
-
-        <!--其他评论card-->
-        <div class="card">
-            
-                <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
     </div>
-    <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '8e2eb130f3497ebff509',
-        clientSecret: 'c7de686085c26bea06191549055729f39c8318a7',
-        repo: 'CoolboY61.github.io',
-        owner: 'CoolboY61',
-        admin: ["CoolboY61"],
-        id: '2021-05-18T21-17-39',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
+    
 
-    gitalk.render('gitalk-container');
-</script>
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
             
-
             
-
+            <div class="article tag-post col s12 m6 l4" data-tags="Java, 多线程" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2021/10/11/duo-xian-cheng-yi/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/7.jpg" class="responsive-img" alt="多线程（一）">
+                            
+                            <span class="card-title">多线程（一）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                CoolY
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-
-            
-
-            
-
-            
-
-            
-
         </div>
-    </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

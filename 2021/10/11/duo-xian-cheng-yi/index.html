@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PicGo + GitHub 搭建个人图床, CoolYの博客">
+    <meta name="keywords" content="多线程（一）, CoolYの博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PicGo + GitHub 搭建个人图床 | CoolYの博客</title>
+    <title>多线程（一） | CoolYの博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PicGo + GitHub 搭建个人图床</h1>
+                    <h1 class="description center-align post-title">多线程（一）</h1>
                 </div>
             </div>
         </div>
@@ -457,8 +457,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/web/">
-                                <span class="chip bg-color">web</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                <span class="chip bg-color">多线程</span>
                             </a>
                         
                     </div>
@@ -473,21 +477,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-22
+                    2021-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    3.2k
                 </div>
                 
 
@@ -512,51 +516,319 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>PicGo这款工具，可以轻易的将图片转换为链接。结合Github解决了Typora对图片这一困扰我许久的难题</p>
-<h2 id="1-GitHub-仓库设置"><a href="#1-GitHub-仓库设置" class="headerlink" title="1. GitHub 仓库设置"></a>1. GitHub 仓库设置</h2><blockquote>
-<p>流程：新建 public 仓库 -&gt; 创建 token -&gt; 复制 token 备用</p>
-</blockquote>
-<h3 id="1-1-新建仓库"><a href="#1-1-新建仓库" class="headerlink" title="1.1 新建仓库"></a>1.1 新建仓库</h3><p><strong>点击 git 主页右上角的 <code>+</code> 创建 <code>New repository</code>；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/2.png"></p>
-<p><strong>填写仓库信息，例如我就创建了一个 <code>cloudimg</code> 的仓库。这里注意，仓库得设置为 <code>Public</code> 因为后面通过客户端访问算是外部访问，因此无法访问 <code>Private</code> ，这样的话图片传上来之后只能存储不能显示。所以要设置为 <code>Public</code>。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/1.png"></p>
-<h3 id="1-2-创建-token-并复制保存"><a href="#1-2-创建-token-并复制保存" class="headerlink" title="1.2 创建 token 并复制保存"></a>1.2 创建 token 并复制保存</h3><p><strong>此时仓库已经建立，点击右上角头像，然后进入设置；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/4.png"></p>
-<p><strong>在页面最下找到 <code>Developer settings</code>，点击进入；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/5.png"></p>
-<p><strong>创建 token；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/6.png"></p>
-<p><strong>填 description（也是随心填），勾选复选框 repo ，接着到页面底部 <code>Generate token</code> 就完成了；</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/7.png"></p>
-<p><strong>然后复制生成一串字符 token，这个 token 只出现一次，所以要保存一下（我一般记在微信收藏）。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/8.png"></p>
-<h2 id="2-PicGo-客户端配置"><a href="#2-PicGo-客户端配置" class="headerlink" title="2. PicGo 客户端配置"></a>2. PicGo 客户端配置</h2><h3 id="2-1-下载-amp-安装"><a href="#2-1-下载-amp-安装" class="headerlink" title="2.1 下载&amp;安装"></a>2.1 下载&amp;安装</h3><p>PicGo （目前 2.0.4）是一个开源的图床工具，非常优秀。可以到 git 上下载，但下载速度太慢，所以我放了一个百度云的链接，速度快很多。</p>
-<p>git地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo</a></p>
-<p>Win版下载链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/17KycPMoqNCnc1cR_yQO8nQ">百度云</a> 密码：PicG</p>
-<h3 id="2-2-配置"><a href="#2-2-配置" class="headerlink" title="2.2 配置"></a>2.2 配置</h3><p>先上图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/9.png"></p>
+                <p>​        </p>
+<p>​        多线程（multithreading），是指从软件或者硬件上实现多个线程并发执行的技术。具有多线程能力的计算机因有硬件支持而能够在同一时间执行多于一个线程，进而提升整体处理性能。具有这种能力的系统包括<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%A4%9A%E5%A4%84%E7%90%86%E6%9C%BA/10375153">对称多处理机</a>、多核心处理器以及芯片级多处理或同时多线程处理器。在一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F/71525">程序</a>中，这些独立运行的程序片段叫作“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BA%BF%E7%A8%8B/103101">线程</a>”（Thread），利用它编程的概念就叫作“多线程处理”  。</p>
+<h1 id="一、多线程的创建"><a href="#一、多线程的创建" class="headerlink" title="一、多线程的创建"></a>一、多线程的创建</h1><h3 id="1-继承Thread类"><a href="#1-继承Thread类" class="headerlink" title="1. 继承Thread类"></a>1. 继承Thread类</h3><ul>
+<li>继承Thread类</li>
+<li>重写run（）方法</li>
+<li>创建线程对象，调用对象的start（）方法开启线程</li>
+</ul>
+<h3 id="2-实现Runnable接口"><a href="#2-实现Runnable接口" class="headerlink" title="2. 实现Runnable接口"></a>2. 实现Runnable接口</h3><ul>
+<li><p>实现Runnable接口</p>
+</li>
+<li><p>实现run（）方法</p>
+</li>
+<li><p>创建线程对象，调用start（）方法启动线程</p>
 <ul>
-<li><p>仓库名 即你的仓库名</p>
-</li>
-<li><p>分支名 默认 <code>master</code></p>
-</li>
-<li><p>Token 就是刚刚复制的那一串字符</p>
-</li>
-<li><p>存储路径 这个可以填也可以不填，填了的话图片就上传到 git 中 <code>data</code> 这个文件夹</p>
-</li>
-<li><p>域名 <code>https://raw.githubusercontent.com/yefcion/cloudimg/master</code>这个要改一下 格式 <code>https://raw.githubusercontent.com/[username]/[仓库名]/master</code>（更快！）</p>
+<li>创建线程对象<pre><code>+ 创建Thread类，将上面创建的线程对象传入Thread构造器中
++  调用Thread类的start接口启动线程
+</code></pre>
 </li>
 </ul>
-<p>然后点确定就可以了。</p>
-<blockquote>
-<p>注：这里提供一个加速访问图片的方法：CDN加速，具体原理自行百度（我还不是很懂）<br>将上面的域名改为：</p>
-<p>原 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/yefcion/cloudimg/master">https://raw.githubusercontent.com/yefcion/cloudimg/master</a><br>现 <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yefcion/cloudimg@master">https://cdn.jsdelivr.net/gh/yefcion/cloudimg@master</a></p>
+<p>推荐使用Runnable接口，方便一个对象被多个线程使用</p>
+</li>
+</ul>
+<h3 id="3-实现Callable接口-了解"><a href="#3-实现Callable接口-了解" class="headerlink" title="3. 实现Callable接口(了解)"></a>3. 实现Callable接口(了解)</h3><ul>
+<li>实现Callable接口，需要返回值类型</li>
+<li>重写call方法，需要抛出异常</li>
+<li>创建目标对象</li>
+<li>创建执行服务：ExecutorService ser = Executors.newFixedThreadPool(1);</li>
+<li>提交执行：Future<boolean> result1 = ser.submit(t1);</boolean></li>
+<li>获取结果：boolean r1 = result1.get();</li>
+<li>关闭服务：ser.shutdownNow();</li>
+</ul>
+<h1 id="二、Lamda表达式"><a href="#二、Lamda表达式" class="headerlink" title="二、Lamda表达式"></a>二、Lamda表达式</h1><h3 id="1-使用原因"><a href="#1-使用原因" class="headerlink" title="1. 使用原因"></a>1. 使用原因</h3><ul>
+<li>避免匿名内部类定义过多</li>
+<li>可以让代码看起来很简洁</li>
+<li>去掉了一堆没有意义的代码，只留下核心的逻辑</li>
+</ul>
+<h3 id="2-函数式接口"><a href="#2-函数式接口" class="headerlink" title="2. 函数式接口"></a>2. 函数式接口</h3><ul>
+<li>任何接口，如果只包含唯一一个抽象方法，那么他就是一个函数式接口</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>对于函数式接口，我们可以通过lambda表达式来创建该接口的对象</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestLambda2</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ILove</span> love <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I Love You !!!"</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        
+        love<span class="token punctuation">.</span><span class="token function">love</span><span class="token punctuation">(</span><span class="token number">521</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 函数式接口</span>
+<span class="token keyword">interface</span> <span class="token class-name">ILove</span> <span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token function">love</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="三、-静态代理模式"><a href="#三、-静态代理模式" class="headerlink" title="三、 静态代理模式"></a>三、 静态代理模式</h1><h3 id="1-内容"><a href="#1-内容" class="headerlink" title="1. 内容"></a>1. 内容</h3><ul>
+<li>真实对象要和代理对象都实现同一个接口</li>
+<li>代理对象要代理真是角色</li>
+</ul>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><ul>
+<li><p>真实对象</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">You</span> <span class="token keyword">implements</span> <span class="token class-name">Marry</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">HappyMarry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"刘艺今天结婚，超级开心！！！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>代理对象</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">WeddingCommpany</span> <span class="token keyword">implements</span> <span class="token class-name">Marry</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Marry</span> target<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">WeddingCommpany</span><span class="token punctuation">(</span><span class="token class-name">Marry</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>target <span class="token operator">=</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">HappyMarry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">before</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token namespace">this<span class="token punctuation">.</span>target<span class="token punctuation">.</span></span>HappyMarry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">after</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">after</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结婚之后，结尾收款。"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">before</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结婚之前，布置婚礼现场。"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运行时，只需要创建一个代理对象，和一个真实对象，将真实对象传给代理对象，调用代理对象的方法即可。</p>
+</li>
+</ul>
+<h3 id="3-好处"><a href="#3-好处" class="headerlink" title="3. 好处"></a>3. 好处</h3><ul>
+<li><p>代理对象可以做很多真实对象做不了的事情</p>
+</li>
+<li><p>真实对象专注做自己的事情 <strong>（对原有的方法增强！！）</strong></p>
+<p><font color="Bule">Runnable接口和Thread代理都有run方法，最后调用的是Thread中的start方法，但实际执行的还是Runnable中的run方法中的方法体。</font></p>
+</li>
+</ul>
+<h1 id="四、线程的五大状态"><a href="#四、线程的五大状态" class="headerlink" title="四、线程的五大状态"></a>四、线程的五大状态</h1><pre><code>+ new 新生状态，线程对象一旦创建就进入到了新生状态
++ 就绪状态，调用start（）方法，线程立即进入就绪状态，但不意味着立即调度执行
++ 阻塞状态，当调用sleep，wait或同步锁定时线程进入阻塞状态，就是代码不往下执行，阻塞事件解除后，重新进入就绪状态，等待CPU调度执行
++ 运行状态，进入运行状态，线程才真正执行线程体的代码块
++ 死亡状态dead，线程中断或者结束，一旦进入死亡状态就不能再次启动
+</code></pre>
+<h3 id="1-停止线程"><a href="#1-停止线程" class="headerlink" title="1. 停止线程"></a>1. 停止线程</h3><ul>
+<li><p>不推荐直接使用JDK提供的stop（）、destroy（）方法</p>
+</li>
+<li><p>推荐线程自己停下来</p>
+</li>
+<li><p>建议使用一个标志位进行终止变量当flag = false则总之线程运行</p>
+<p>设置一个循环当达到要求时，改变他的值，停止线程</p>
+</li>
+</ul>
+<h3 id="2-线程休眠"><a href="#2-线程休眠" class="headerlink" title="2. 线程休眠"></a>2. 线程休眠</h3><ul>
+<li><p>sleep（时间）指定当前线程阻塞的毫秒数</p>
+</li>
+<li><p>sleep存在异常InterruptedException</p>
+</li>
+<li><p>sleep结束后线程进入就绪状态</p>
+</li>
+<li><p>sleep可以模拟网络延迟，倒计时等</p>
+</li>
+<li><p>每一个对象都有一个锁，sleep不会释放锁</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span>毫秒数<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<hr>
+<h3 id="3-线程礼让"><a href="#3-线程礼让" class="headerlink" title="3. 线程礼让"></a>3. 线程礼让</h3><ul>
+<li><p>礼让线程，让当前正在执行的线程暂停，但不阻塞</p>
+</li>
+<li><p>将线程从运行状态转换为就绪状态</p>
+</li>
+<li><p>让CUP重新调度，礼让不一定成功！让了之后还会和其他线程继续相互竞争。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token keyword">yield</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h3 id="4-线程强制执行"><a href="#4-线程强制执行" class="headerlink" title="4. 线程强制执行"></a>4. 线程强制执行</h3><ul>
+<li><p>Join合并线程，待该线程执行完成后，再执行其他线程，它执行时其他线程阻塞</p>
+</li>
+<li><p>可以想象成插队，调用该线程对象的join（）方法</p>
+</li>
+<li><p>在join之前要是没有其他限制，那么线程都处于并行状态，会出现互相插队的情况</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span> thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+······
+thread<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="5-观察线程的状态（state）"><a href="#5-观察线程的状态（state）" class="headerlink" title="5. 观察线程的状态（state）"></a>5. 观察线程的状态（state）</h3><blockquote>
+<p><font color="red"> NEW&nbsp;</font> :尚未启动的线程处于该状态</p>
+<p><font color="red">RUNNABLE</font> :在JAVA虚拟机中执行的线程处于此状态</p>
+<p><font color="red">BLOCKED</font> ：被阻塞等待监视器锁定的线程处于该状态</p>
+<p><font color="red">WAITING&nbsp;</font>：正在等待另一个线程执行特定的动作的线程处于该状态</p>
+<p><font color="red">TIMED_WAITING&nbsp;</font>：正在等待另一个线程执行动作到达指定等待时间的线程处于该状态</p>
+<p><font color="red">TERMINATED&nbsp;</font>：已退出的线程处于该状态</p>
 </blockquote>
-<p>然后关于上传的快捷键设置。默认的是 Mac 按键，推荐改成 <code>Ctrl + alt +c</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/CoolboY61/PicGo_for_Blog//Blog_Img/PicGo_GitHub/img/10.png"></p>
-<p>综上，操作完成。</p>
-<p>本方案唯一缺点，不能私人。但是考虑到 GitHub 上传的图在列表里没法预览，应该没人会闲着没事翻记录。</p>
-<p>转载至：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yefcion/article/details/88412025">https://blog.csdn.net/yefcion/article/details/88412025</a></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span> thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Thread<span class="token punctuation">.</span>State</span> state <span class="token operator">=</span> thread<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="6-线程优先级"><a href="#6-线程优先级" class="headerlink" title="6. 线程优先级"></a>6. 线程优先级</h3><ul>
+<li><p>获取优先级 <strong>getPriority()</strong> </p>
+</li>
+<li><p>改变优先级 <strong>setPriority(int XXX)</strong></p>
+</li>
+<li><p>线程的优先级用数字表示，范围从<strong>1~10</strong>，优先级大了只是概率大，不是一定会先运行</p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span> thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+thread<span class="token punctuation">.</span><span class="token function">setPriority</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">~</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="7-守护（daemon）线程"><a href="#7-守护（daemon）线程" class="headerlink" title="7. 守护（daemon）线程"></a>7. 守护（daemon）线程</h3><ul>
+<li>线程分为用户线程和守护线程</li>
+<li>虚拟机必须确保用户线程执行完毕</li>
+<li>虚拟机不用等待守护线程执行完毕</li>
+<li>如，后台记录操作日志，监控内存，垃圾回收等待</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Thread</span> thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+thread<span class="token punctuation">.</span><span class="token function">setDaemon</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><font color="red">默认是false表示是用户线程，正常的线程都是用户线程，改成true即为守护线程</font></p>
+<p><font color="green">守护线程就是不被虚拟机守护的线程，虚拟机只会关心等待用户线程运行完毕，只要用户线程执行完毕那么虚拟机就会关闭，不会等待守护线程</font></p>
+<h1 id="五、-线程同步-重点"><a href="#五、-线程同步-重点" class="headerlink" title="五、 线程同步(重点)"></a>五、 线程同步(重点)</h1><p><strong>多个线程操作同一个资源（并发）</strong>,线程同步其实就是一种等待机制，多个需要同时访问此对象的线程进入这个==对象的等待池==形成队列，等待前面线程使用完毕，下一个线程再使用。</p>
+<ul>
+<li>形成条件：队列+锁（synchronized），当一个线程获取了对象的排它锁，独享资源，其他线程必须等待，使用后释放锁即可</li>
+<li>存在问题：<ul>
+<li>一个线程持有锁会导致其他所有需要此锁的线程挂起</li>
+<li>在多线程竞争下，加锁，释放锁会导致比较多的==上下文切换==和==调度延时==，引起性能问题</li>
+<li>如果一个优先级高的线程等待一个优先级低的线程释放锁，会导致优先级倒置，引起性能问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-同步方法"><a href="#1-同步方法" class="headerlink" title="1. 同步方法"></a>1. 同步方法</h3><ul>
+<li><strong>synchronized</strong> 关键字。它有两种用法：synchronized方法和synchronized块</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token keyword">int</span> ages<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><p>synchronized 方法控制对象访问，每个synchronized方法必须获得调用该方法对象的锁才能执行，否则线程阻塞，方法一旦执行，就独占锁，直到该方法返回才释放锁，后面被阻塞的线程才能获得这个锁继续执行 <font color="red"><strong>缺陷</strong>：将一个方法申明为synchronized会降低效率</font></p>
+</li>
+<li><p>synchronized默认锁的是this对象</p>
+</li>
+</ul>
+<h3 id="2-同步块"><a href="#2-同步块" class="headerlink" title="2. 同步块"></a>2. 同步块</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token function">sychronized</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><p><strong>Obj</strong> 称为同步监视器</p>
+<ul>
+<li><strong>Obj</strong> 可以是任何对象，但是推荐使用共享资源作为同步监视器</li>
+<li>同步方法中无需指定同步监视器，因为同步方法的监视器就是this，就是这个（类）对象本身，或者是class【反射中讲解】</li>
+</ul>
+</li>
+<li><p>同步监视器的执行过程</p>
+<ul>
+<li>第一个线程访问，锁定同步监视器，执行其中的代码</li>
+<li>第二个线程访问，发现同步监视器被锁定，无法访问</li>
+<li>第一个线程访问完毕，解锁同步监视器</li>
+<li>第二个线程访问，发现同步监视器没有锁，然后锁定并访问</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-JUC（并发包）"><a href="#3-JUC（并发包）" class="headerlink" title="3. JUC（并发包）"></a>3. JUC（并发包）</h3><p>​    </p>
+<h3 id="4-死锁"><a href="#4-死锁" class="headerlink" title="4. 死锁"></a>4. 死锁</h3><p>​    某一个同步块同时拥有“==两个以上对象的锁==”时，就可能会发生==死锁==问题</p>
+<p>​    <strong>死锁产生的四个必要条件：</strong></p>
+<ul>
+<li><p>互斥条件：一个资源每次只能被放进一个进程使用</p>
+</li>
+<li><p>请求与保持条件：一个进程因请求资源而堵塞时，对已获得的资源保持不放</p>
+</li>
+<li><p>不剥夺条件：进程已获得的资源，在未使用之前，不能强行剥夺</p>
+</li>
+<li><p>循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系</p>
+<p><font color="red">只要想办法破解其中的任意一个或者多个条件就可以避免死锁发生</font></p>
+</li>
+</ul>
+<h3 id="5-Lock-锁"><a href="#5-Lock-锁" class="headerlink" title="5. Lock(锁)"></a>5. Lock(锁)</h3><blockquote>
+<p><strong>java.util.confurrent.locks.Lock接口是控制多个线程对共享资源进行访问的工具。锁提供了对共享资源的独占访问，每次只能有一个线程对Lock对象加锁，线程开始访问共享资源之前应先获得Lock对象。</strong></p>
+<p>ReentrantLock<strong>（可重入锁）</strong>类实现了Lock,它拥有与synchronized相同的并发性和内存语义，在实现线程安全的控制中，比较常用的是ReentrantLock，可以显式加锁、释放锁</p>
+</blockquote>
+<ul>
+<li>与synchronized的区别<ul>
+<li>Lock是显式锁（手动开启和关闭锁）synchronized是隐式锁，出了作用域自动释放</li>
+<li>Lock只有代码块锁，synchronized有代码块锁和方法锁</li>
+<li>使用Lock锁，JVM将花费较少的时间来调度线程，性能更好。并且具有更好的拓展性（提供更多的子类）</li>
+<li>优先使用顺序：Lock &gt; 同步代码块 （已经进入方法体，分配了相应资源） &gt; 同步方法（在方法体之外）</li>
+</ul>
+</li>
+</ul>
+<h1 id="六、线程协作"><a href="#六、线程协作" class="headerlink" title="六、线程协作"></a>六、线程协作</h1><h3 id="1-生产者消费模式（一个问题）"><a href="#1-生产者消费模式（一个问题）" class="headerlink" title="1. 生产者消费模式（一个问题）"></a>1. 生产者消费模式（一个问题）</h3><blockquote>
+<p><strong>应用场景</strong>：生产者和消费者模式问题    </p>
+</blockquote>
+<ul>
+<li>假设仓库中只能存放一件产品，生产者将生产出来的产品放入仓库，消费者将仓库中产品取走消费。</li>
+<li>如果仓库中没有产品，则生产者将产品放入仓库，否则停止生产并等待，直到仓库中的产品被消费者取走为止。</li>
+<li>如果仓库中放有产品，则消费者可以将产品取走消费，否则停止消费并等待，知道仓库中再次放入产品为止。</li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>Java中提供了几个方法解决线程之间的通信问题：</strong></p>
+</blockquote>
+<ul>
+<li><strong>wait();</strong> 表示线程一直等待，直到其他线程通知，与sleep不同会释放锁</li>
+<li><strong>wait(long timeout);</strong>  制定等待的毫秒数</li>
+<li><strong>notify();</strong>  唤醒一个处于等待状态的线程</li>
+<li><strong>notifyAll();</strong>  唤醒同一个对象上所有调用wait（）方法的线程，优先级别高的线程优先调度</li>
+</ul>
+<h3 id="2-管程法"><a href="#2-管程法" class="headerlink" title="2. 管程法"></a>2. 管程法</h3><ul>
+<li>生产者：负责生产数据的模块（可能是方法，对象，线程，进程）</li>
+<li>消费者：负责处理数据的模块（可能是方法，对象，线程，进程）</li>
+<li>缓冲区：消费者不能直接使用生产者的数据，他们之间有个“缓冲区”</li>
+</ul>
+<h1 id="七、-线程池"><a href="#七、-线程池" class="headerlink" title="七、 线程池"></a>七、 线程池</h1><ol>
+<li><p>背景：经常创建和销毁，使用量特别大的资源，比如并发情况下的线程，对性能影响很大</p>
+</li>
+<li><p>思路：提前创建好多个线程，放入线程池中，使用时直接获取，使用完放回池中。可以避免频繁创建销毁、实现重复利用。类似于生活中的公共交通工具</p>
+</li>
+<li><p>好处：</p>
+<ul>
+<li>提高响应速度（减少了创建线程的时间）</li>
+<li>降低资源消耗（重复利用线程，不需要每次都创建）</li>
+<li>便于线程管理<ul>
+<li>corePoolSize：核心池的大小</li>
+<li>maximumPoolSize：最大线程数</li>
+<li>keepAliveTime：线程没有任务时最多保持多长时间后会终止</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程池相关API：ExecutorService和Executors</p>
+<ul>
+<li><p>ExecutorServer：真正的线程池接口。常见子类：ThreadPoolExecutor</p>
+<ul>
+<li>void execute（Runnable command）：执行任务/命令，没有返回值，一般执行Runnable</li>
+<li><t> Future <t> submit（Callable<t> task）: 执行任务，有返回值，一般来执行Callable</t></t></t></li>
+<li>void shutdown() ：关闭线程池</li>
+</ul>
+</li>
+<li><p>Executors：工具类、线程池的工厂类</p>
+</li>
+</ul>
+</li>
+</ol>
 
                 
             </div>
@@ -583,7 +855,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/">https://wendao.online/2021/05/20/picgo-github-da-jian-ge-ren-tu-chuang/</a>
+                    <a href="https://wendao.online/2021/10/11/duo-xian-cheng-yi/">https://wendao.online/2021/10/11/duo-xian-cheng-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,8 +893,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/web/">
-                                    <span class="chip bg-color">web</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                    <span class="chip bg-color">多线程</span>
                                 </a>
                             
                         </div>
@@ -793,7 +1069,7 @@
         repo: 'CoolboY61.github.io',
         owner: 'CoolboY61',
         admin: ["CoolboY61"],
-        id: '2021-05-20T21-25-50',
+        id: '2021-10-11T22-03-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -821,16 +1097,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/20/qian-xue-css3/">
+                <a href="/2021/10/11/duo-xian-cheng-yi/">
                     <div class="card-image">
                         
-                        <img src="/img/3.jpg" class="responsive-img" alt="浅学CSS3">
+                        <img src="/img/7.jpg" class="responsive-img" alt="多线程（一）">
                         
-                        <span class="card-title">浅学CSS3</span>
+                        <span class="card-title">多线程（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -840,9 +1117,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -851,15 +1128,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/web/">
-                        <span class="chip bg-color">web</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">多线程</span>
                     </a>
                     
                 </div>
@@ -873,12 +1151,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/20/qian-xue-html5/">
+                <a href="/2021/10/08/mybatis/">
                     <div class="card-image">
                         
-                        <img src="/img/1.jpg" class="responsive-img" alt="浅学HTML5">
+                        <img src="/img/8.jpg" class="responsive-img" alt="Mybatis">
                         
-                        <span class="card-title">浅学HTML5</span>
+                        <span class="card-title">Mybatis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -889,7 +1167,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-08
                             </span>
                         <span class="publish-author">
                             
@@ -902,12 +1180,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTML/">
-                        <span class="chip bg-color">HTML</span>
-                    </a>
-                    
                     <a href="/tags/web/">
                         <span class="chip bg-color">web</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">框架</span>
                     </a>
                     
                 </div>
