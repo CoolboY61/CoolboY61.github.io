@@ -484,7 +484,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-11
+                    2021-10-12
                 </div>
                 
 
@@ -530,9 +530,10 @@
 </li>
 <li><p>创建线程对象，调用start（）方法启动线程</p>
 <ul>
-<li>创建线程对象<pre><code>+ 创建Thread类，将上面创建的线程对象传入Thread构造器中
-+  调用Thread类的start接口启动线程
-</code></pre>
+<li>创建线程对象<ul>
+<li>创建Thread类，将上面创建的线程对象传入Thread构造器中</li>
+<li>  调用Thread类的start接口启动线程</li>
+</ul>
 </li>
 </ul>
 <p>推荐使用Runnable接口，方便一个对象被多个线程使用</p>
@@ -625,12 +626,9 @@
 <p><font color="Bule">Runnable接口和Thread代理都有run方法，最后调用的是Thread中的start方法，但实际执行的还是Runnable中的run方法中的方法体。</font></p>
 </li>
 </ul>
-<h1 id="四、线程的五大状态"><a href="#四、线程的五大状态" class="headerlink" title="四、线程的五大状态"></a>四、线程的五大状态</h1><pre><code>+ new 新生状态，线程对象一旦创建就进入到了新生状态
-+ 就绪状态，调用start（）方法，线程立即进入就绪状态，但不意味着立即调度执行
-+ 阻塞状态，当调用sleep，wait或同步锁定时线程进入阻塞状态，就是代码不往下执行，阻塞事件解除后，重新进入就绪状态，等待CPU调度执行
-+ 运行状态，进入运行状态，线程才真正执行线程体的代码块
-+ 死亡状态dead，线程中断或者结束，一旦进入死亡状态就不能再次启动
-</code></pre>
+<h1 id="四、线程的五大状态"><a href="#四、线程的五大状态" class="headerlink" title="四、线程的五大状态"></a>四、线程的五大状态</h1><blockquote>
+<p>new 新生状态，线程对象一旦创建就进入到了新生状态<br>就绪状态，调用start（）方法，线程立即进入就绪状态，但不意味着立即调度执行<br>阻塞状态，当调用sleep，wait或同步锁定时线程进入阻塞状态，就是代码不往下执行，阻塞事件解除后，重新进入就绪状态，等待CPU调度执行<br>运行状态，进入运行状态，线程才真正执行线程体的代码块<br>死亡状态dead，线程中断或者结束，一旦进入死亡状态就不能再次启动</p>
+</blockquote>
 <h3 id="1-停止线程"><a href="#1-停止线程" class="headerlink" title="1. 停止线程"></a>1. 停止线程</h3><ul>
 <li><p>不推荐直接使用JDK提供的stop（）、destroy（）方法</p>
 </li>
@@ -1097,17 +1095,16 @@ thread<span class="token punctuation">.</span><span class="token function">setDa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/11/duo-xian-cheng-yi/">
+                <a href="/2021/10/18/wu-xian-wang-luo-ji-zhu-xue-xi-bi-ji/">
                     <div class="card-image">
                         
-                        <img src="/img/7.jpg" class="responsive-img" alt="多线程（一）">
+                        <img src="/img/9.jpg" class="responsive-img" alt="无线网络技术学习笔记">
                         
-                        <span class="card-title">多线程（一）</span>
+                        <span class="card-title">无线网络技术学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1117,9 +1114,9 @@ thread<span class="token punctuation">.</span><span class="token function">setDa
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1128,16 +1125,15 @@ thread<span class="token punctuation">.</span><span class="token function">setDa
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                        <span class="chip bg-color">多线程</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
                     </a>
                     
                 </div>
@@ -1186,6 +1182,10 @@ thread<span class="token punctuation">.</span><span class="token function">setDa
                     
                     <a href="/tags/%E6%A1%86%E6%9E%B6/">
                         <span class="chip bg-color">框架</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -1418,7 +1418,7 @@ thread<span class="token punctuation">.</span><span class="token function">setDa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.2k</span>
+                        class="white-color">15.3k</span>
             
             
             
